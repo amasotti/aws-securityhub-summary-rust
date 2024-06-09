@@ -1,0 +1,28 @@
+[package]
+name = "sechub_summary"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["macros"] }
+lambda_runtime = "0.11.2"
+serde = "1"
+aws-config = "1.5.1"
+aws-sdk-securityhub = "1.31.0"
+aws-sdk-sns = "1.30.0"
+log = "0.4.21"
+tokio-stream = "0.1.15"
+env_logger = "0.11.3"
+
+[package.metadata.lambda.env]
+RUST_LOG = "debug"
+AWS_PROFILE = "default"
+AWS_REGION = "eu-central-1"
+SNSTopic = "<sns-topic-arn>"
+ARNInsight01 = "<insight-arn>"
+ARNInsight02 = "<insight-arn>"
+ARNInsight03 = "<insight-arn>"
+ARNInsight04 = "<insight-arn>"
+ARNInsight05 = "<insight-arn>"
+ARNInsight06 = "<insight-arn>"
+ARNInsight07 = "<insight-arn>"
